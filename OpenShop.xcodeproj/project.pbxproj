@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DF0E69E3197D9E56001F493E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69E2197D9E56001F493E /* main.m */; };
+		DF0E69EC197D9ED9001F493E /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69EB197D9ED9001F493E /* Product.m */; };
+		DF0E69EF197D9FA7001F493E /* Television.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69EE197D9FA7001F493E /* Television.m */; };
+		DF0E69F2197DA09D001F493E /* Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69F1197DA09D001F493E /* Radio.m */; };
+		DF0E69F5197DA1D4001F493E /* Computer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69F4197DA1D4001F493E /* Computer.m */; };
+		DF0E69FA197DA64B001F493E /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69F9197DA64B001F493E /* Stock.m */; };
+		DF0E69FE197DADA5001F493E /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E69FD197DADA5001F493E /* Customer.m */; };
+		DF0E6A02197DAE07001F493E /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0E6A01197DAE07001F493E /* Order.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,20 @@
 /* Begin PBXFileReference section */
 		DF0E69DF197D9E56001F493E /* OpenShop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenShop; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0E69E2197D9E56001F493E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF0E69EA197D9ED9001F493E /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		DF0E69EB197D9ED9001F493E /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		DF0E69ED197D9FA7001F493E /* Television.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Television.h; sourceTree = "<group>"; };
+		DF0E69EE197D9FA7001F493E /* Television.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Television.m; sourceTree = "<group>"; };
+		DF0E69F0197DA09D001F493E /* Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radio.h; sourceTree = "<group>"; };
+		DF0E69F1197DA09D001F493E /* Radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Radio.m; sourceTree = "<group>"; };
+		DF0E69F3197DA1D4001F493E /* Computer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Computer.h; sourceTree = "<group>"; };
+		DF0E69F4197DA1D4001F493E /* Computer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Computer.m; sourceTree = "<group>"; };
+		DF0E69F8197DA64B001F493E /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
+		DF0E69F9197DA64B001F493E /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
+		DF0E69FC197DADA5001F493E /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		DF0E69FD197DADA5001F493E /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		DF0E6A00197DAE07001F493E /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		DF0E6A01197DAE07001F493E /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +78,63 @@
 		DF0E69E1197D9E56001F493E /* OpenShop */ = {
 			isa = PBXGroup;
 			children = (
+				DF0E69E9197D9EAF001F493E /* Classes */,
 				DF0E69E2197D9E56001F493E /* main.m */,
 			);
 			path = OpenShop;
+			sourceTree = "<group>";
+		};
+		DF0E69E9197D9EAF001F493E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E69FF197DADD7001F493E /* Order */,
+				DF0E69FB197DAD9C001F493E /* Customer */,
+				DF0E69F7197DA31A001F493E /* Stock */,
+				DF0E69F6197DA30C001F493E /* Products */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DF0E69F6197DA30C001F493E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E69EA197D9ED9001F493E /* Product.h */,
+				DF0E69EB197D9ED9001F493E /* Product.m */,
+				DF0E69ED197D9FA7001F493E /* Television.h */,
+				DF0E69EE197D9FA7001F493E /* Television.m */,
+				DF0E69F0197DA09D001F493E /* Radio.h */,
+				DF0E69F1197DA09D001F493E /* Radio.m */,
+				DF0E69F3197DA1D4001F493E /* Computer.h */,
+				DF0E69F4197DA1D4001F493E /* Computer.m */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF0E69F7197DA31A001F493E /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E69F8197DA64B001F493E /* Stock.h */,
+				DF0E69F9197DA64B001F493E /* Stock.m */,
+			);
+			name = Stock;
+			sourceTree = "<group>";
+		};
+		DF0E69FB197DAD9C001F493E /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E69FC197DADA5001F493E /* Customer.h */,
+				DF0E69FD197DADA5001F493E /* Customer.m */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		DF0E69FF197DADD7001F493E /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E6A00197DAE07001F493E /* Order.h */,
+				DF0E6A01197DAE07001F493E /* Order.m */,
+			);
+			name = Order;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0E69FA197DA64B001F493E /* Stock.m in Sources */,
 				DF0E69E3197D9E56001F493E /* main.m in Sources */,
+				DF0E69F2197DA09D001F493E /* Radio.m in Sources */,
+				DF0E69EC197D9ED9001F493E /* Product.m in Sources */,
+				DF0E69F5197DA1D4001F493E /* Computer.m in Sources */,
+				DF0E69EF197D9FA7001F493E /* Television.m in Sources */,
+				DF0E6A02197DAE07001F493E /* Order.m in Sources */,
+				DF0E69FE197DADA5001F493E /* Customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
