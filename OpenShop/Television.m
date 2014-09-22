@@ -14,4 +14,8 @@
     return self;
 }
 
+-(void)showSomeImages {
+    NSLog(@"The television streams a nice game where the player seems to have a very good time!");
+}
+
 @end

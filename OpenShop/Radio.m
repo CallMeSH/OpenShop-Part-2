@@ -14,4 +14,8 @@
     return self;
 }
 
+-(void)streamSomeMusic {
+    NSLog(@"The radio streams an underground track...");
+}
+
 @end

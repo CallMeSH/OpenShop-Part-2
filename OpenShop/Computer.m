@@ -26,4 +26,12 @@
     return self;
 }
 
+-(void)showSomeImages {
+    NSLog(@"The screen shows some amazing 3D graphics.");
+}
+
+-(void)streamSomeMusic {
+    NSLog(@"The speakers stream the sound of an epic battle");
+}
+
 @end

@@ -30,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DF0916B219D0A2C2003B6735 /* Watchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Watchable.h; sourceTree = "<group>"; };
+		DF0916B319D0A2FE003B6735 /* Listenable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listenable.h; sourceTree = "<group>"; };
 		DF0E69DF197D9E56001F493E /* OpenShop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenShop; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0E69E2197D9E56001F493E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF0E69EA197D9ED9001F493E /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
@@ -59,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0916B119D0A25A003B6735 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DF0916B219D0A2C2003B6735 /* Watchable.h */,
+				DF0916B319D0A2FE003B6735 /* Listenable.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		DF0E69D6197D9E56001F493E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +89,7 @@
 		DF0E69E1197D9E56001F493E /* OpenShop */ = {
 			isa = PBXGroup;
 			children = (
+				DF0916B119D0A25A003B6735 /* Protocols */,
 				DF0E69E9197D9EAF001F493E /* Classes */,
 				DF0E69E2197D9E56001F493E /* main.m */,
 			);
@@ -314,6 +326,7 @@
 				DF0E69E8197D9E56001F493E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

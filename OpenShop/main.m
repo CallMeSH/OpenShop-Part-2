@@ -6,9 +6,13 @@
 #import "Radio.h"
 #import "Computer.h"
 #import "Order.h"
+#import "Watchable.h"
+#import "Listenable.h"
 
 void addProduct();
 void buySomething();
+void testProduct();
+Product* getProductFromUser();
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -17,14 +21,17 @@ int main(int argc, const char * argv[]) {
             NSLog(@"Do you want to add something in stock or buy something ?");
             NSLog(@"1: Add a product in Stock");
             NSLog(@"2: Buy something");
+            NSLog(@"3: Test a product");
             
             int choice;
             scanf("%d", &choice);
             
             if(choice == 1) {
                 addProduct();
-            } else {
+            } else if (choice == 2){
                 buySomething();
+            } else {
+                testProduct();
             }
         }
     }
@@ -61,14 +68,7 @@ void addProduct() {
     NSLog(@"Your product '%s' has just been added.", product.name);
 }
 
-void buySomething() {
-    NSLog(@"-------- Shop --------");
-    NSLog(@"Before we start, let's create a customer account...");
-    
-    Customer* customer = [[Customer alloc]initFromWizard];
-    
-    NSLog(@"Now select the product you want to buy from our stocks:");
-    
+Product* getProductFromUser() {
     Stock* stock = [Stock sharedStock];
     
     for (int i = 0; i < 100; i++) {
@@ -86,6 +86,22 @@ void buySomething() {
     
     if(product == nil) {
         NSLog(@"We did not recognize the product you asked");
+    }
+    
+    return product;
+}
+
+void buySomething() {
+    NSLog(@"-------- Shop --------");
+    NSLog(@"Before we start, let's create a customer account...");
+    
+    Customer* customer = [[Customer alloc]initFromWizard];
+    
+    NSLog(@"Now select the product you want to buy from our stocks:");
+    
+    Product* product = getProductFromUser();
+    
+    if(product == nil) {
         return;
     }
     
@@ -94,5 +110,27 @@ void buySomething() {
     if(order) {
         NSLog(@"%s just bought one %s", order.customer.name, order.product.name);
     }
+}
+
+void testProduct() {
+    NSLog(@"-------- Test a product --------");
     
+    NSLog(@"Now select the product you want to test from our stocks:");
+    
+    Product* product = getProductFromUser();
+    
+    if(product == nil) {
+        return;
+    }
+    
+    NSLog(@"The seller turn on the %s.", product.name);
+    
+    if([product conformsToProtocol:@protocol(Watchable)]) {
+        Product<Watchable>* watchableProduct = (Product<Watchable>*) product;
+        [watchableProduct showSomeImages];
+    }
+    if([product conformsToProtocol:@protocol(Listenable)]) {
+        Product<Listenable>* listenableProduct = (Product<Listenable>*) product;
+        [listenableProduct streamSomeMusic];
+    }
 }
